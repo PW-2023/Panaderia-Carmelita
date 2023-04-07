@@ -34,10 +34,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Datos</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="/Panaderia-Carmelita/assets/html/formulario.html">Envio</a>
               </li>
-
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,7 +45,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Quienes somos</a></li>
-                  <li><a class="dropdown-item " href="/Panaderia-Carmelita/assets/HTML/productos.html">Nuestros Productos</a></li>
+                  <li><a class="dropdown-item" href="/Panaderia-Carmelita/assets/HTML/productos.html">Nuestros Productos</a></li>
                   <li><a class="dropdown-item" href="#">Visitanos</a></li>
                 </ul>
               </li>
@@ -62,15 +62,17 @@
                 <form>
 
                     <h3 class="titulo ">DATOS DE ENTREGA</h3>
+                    <br>
                     
                     <!-- clase de emali -->
                     <div class="col-5 ">
-                        <div class="form-group ">
-                            <label for="exampleFormControlInput1">DIRECCION DE EMAIL</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="fulanito@example.com">
-                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          </div>
                     </div>
+                    
                     <p></p>
                     <!-- clase de primer nombre -->
                     <div class="col-4 "  >
@@ -82,6 +84,7 @@
                         <label for="telefono">INGRESE APELLIDO:</label>
                         <input type="text" class="form-control " placeholder="APELLIDO">
                     </div>
+                    <br>
                     <!-- clase de telefono -->
                     <div class="col-3">
                         <div class="form-group">
@@ -109,27 +112,30 @@
 
                             
                         </div>
-                        <label for=""></label>
+                        <div >
+                        <label for="calendario">DIA DE ENTREGA</label>
+                    </div>
                         <br>
+                        
                         <input type="datetime-local" name="datetime" id="datetime">
+                    
                     </div>
             </div>
             <!-- margen a lo cavernicola -->
             <p></p>
             <!-- clase de tipo de envio -->
             <div class="col-4">
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">TIPO DE ENVIO</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>EXPRESS</option>
-                        <option>RAPPI</option>
-                        <option>RETIRO EN LOCAL</option>
-                    </select>
-                    <!-- margen a lo cavernicola -->
-                    <p></p>
-                </div>
             </div>
-            <!-- clase de indicaciones de entrega -->
+            <div class="mb-3">
+              <label for="disabledSelect" class="form-label">TIPO DE ENTREGA</label>
+              <select id="disabledSelect" class="form-select ">
+                <option>EXPRESS</option>
+                <option>RAPPI</option>
+                <option>EN LOCAL</option>
+              </select>
+            </div>
+            </div>
+            <!-- clase de indicaciones de entrega 
             <div class="mi-elemento mt-1" >
             <div class="col-6 "">
                 <div class="form-group">
@@ -138,6 +144,7 @@
                 </div>
             </div>
         </div>
+    -->
             <!--BOTON GUARDAR
             <div class="col-3">
                 <button type="submit" class="btn btn-primary">GUARDAR</button>
@@ -145,38 +152,11 @@
 
             <div>
                 <div class="col" style="padding: 5%;">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        GUARDAR
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">¡Hola!,Quieres Guardar</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Si, guardas los cambios luego se podran editar igualmente.
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">CANCELAR</button>
-                                    <a href="formulario.html">
-                                        <button type="button" class="btn btn-primary">GUARDAR CAMBIOS</button>
-                                    </a>
-
-                                </div>
+                                <button type="submit" class="btn btn-primary">GUARDAR</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
 
