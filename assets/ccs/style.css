@@ -62,7 +62,7 @@ a {
   }
 
 .dropdown-menu{
-    background-color: rgba(255, 204, 64, 0.904);
+    background-color: rgba(255, 204, 64, 0.918);
     
 } 
 
@@ -94,6 +94,19 @@ a {
   .horarioentrega{
     font-weight: bold;
   }
+
+  #familia{
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .card-img-center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  
 
 
 
