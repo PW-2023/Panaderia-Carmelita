@@ -4,8 +4,8 @@ body {
     flex-direction: column;
     align-items: auto;
     justify-content: auto;
-    height: 100vh;
-    overflow: hidden;
+    height: 200vh;
+    overflow: auto;
     margin: 0;
 } 
 
