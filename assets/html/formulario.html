@@ -65,61 +65,55 @@
                     <h3 class="titulo ">DATOS DE ENTREGA</h3>
                     <br>
                     
-                    <!-- clase de emali -->
+                    <!-- clase de email -->
                     <div class="col-5 ">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Direccion de email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="correo@gmail.com" required>
                             <div id="emailHelp" class="form-text"></div>
                           </div>
                     </div>
                     
                     <p></p>
                     <!-- clase de primer nombre -->
-                    <div class="col-4 "  >
-                        <label for="telefono">INGRESE NOMBRE:</label>
-                        <input type=" text" class="form-control " placeholder="NOMBRE">
+                    <div class="col-4 mb-2"  >
+                        <label for="nombre">INGRESE NOMBRE:</label>
+                        <input type=" text" class="form-control " placeholder="NOMBRE" required>
                     </div>
                     <P></P>
-                    <div class="col-4 ">
-                        <label for="telefono">INGRESE APELLIDO:</label>
-                        <input type="text" class="form-control " placeholder="APELLIDO">
+                    <div class="col-4 mb-2">
+                        <label for="apellido">INGRESE APELLIDO:</label>
+                        <input type="text" class="form-control " placeholder="APELLIDO" required>
                     </div>
-                    <br>
                     <!-- clase de telefono -->
-                    <div class="col-3">
+                    <div class="col-3 mb-2">
                         <div class="form-group">
                             <label for="telefono">TELEFONO:</label>
-                            <input type="tel" class="form-control" id="telefono" placeholder="+56 9XXXX-XXXX">
+                            <input type="tel" class="form-control" id="telefono" placeholder="+56 9XXXX-XXXX" required>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 mb-2">
                         <div class="form-group">
                             <label for="rut">RUT:</label>
-                            <input type="text" class="form-control" id="rut" placeholder="xx.xxx.xxx-x">
+                            <input type="number" class="form-control" id="rut" min="9" max="9" placeholder="xx.xxx.xxx-x" required>
                         </div>
                     </div>
                     <p></p>
-                    <div class="col-5">
+                    <div class="col-5 mb-2">
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header horarioentrega">
                                 Horarios de Entrega
                             </div>
-                            <div class="card-body">
+                            <div class="card-body horarioentrega">
                                 <p>Lunes a Viernes: 8:00 am - 6:00 pm</p>
                                 <p>Sábado: 9:00 am - 3:00 pm</p>
                                 <p>Domingo: Cerrado</p>
                             </div>
-
-                            
                         </div>
                         <div >
-                        <label for="calendario">DIA DE ENTREGA</label>
+                        <label class= "mb-2" for="diaentrega">DIA DE ENTREGA</label>
                     </div>
-                        <br>
-                        
-                        <input type="datetime-local" name="datetime" id="datetime">
-                    
+                        <input type="datetime-local" name="datetime" id="datetime" required>
                     </div>
             </div>
             <!-- margen a lo cavernicola -->
@@ -128,13 +122,15 @@
             <div class="col-4">
             </div>
             <div class="mb-3">
-              <label for="disabledSelect" class="form-label">TIPO DE ENTREGA</label>
-              <select id="disabledSelect" class="form-select ">
+              <label for="tipoentrega" class="form-label">TIPO DE ENTREGA</label required>
+              <select id="tipoentrega" class="form-select ">
                 <option>EXPRESS</option>
                 <option>RAPPI</option>
                 <option>EN LOCAL</option>
               </select>
             </div>
+            <label for="comentario" class="form-label">COMENTARIO</label required>
+            <textarea name="comentario" id="comentario" cols="3" rows="4" placeholder="Comentario adicional"></textarea>
             </div>
             <!-- clase de indicaciones de entrega 
             <div class="mi-elemento mt-1" >

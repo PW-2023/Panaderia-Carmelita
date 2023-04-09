@@ -77,13 +77,22 @@ a {
   }
 
   .card {
-    background-color: antiquewhite;
+    background-color:  rgb(245, 221, 189);
+    
 
+  }
+  .card-img-top{
+    border-color:black;
+    border-width: 20px;
   }
 
   .list-group-item{
-    background-color: antiquewhite;
+    background-color: rgb(245, 221, 189);
+   
+  }
 
+  .horarioentrega{
+    font-weight: bold;
   }
 
 
