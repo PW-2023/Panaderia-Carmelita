@@ -1,5 +1,12 @@
 body {
     background-color: antiquewhite;
+    display: flexbox;
+    flex-direction: column;
+    align-items: auto;
+    justify-content: auto;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
 } 
 
 a {
@@ -71,10 +78,13 @@ a {
     margin-top: 10px;
 }
 
-#disabledSelect{
-    font-size: 15px; /* Ajusta el tamaño de fuente */
-    width: 250px; /* Ajusta el ancho del select */
-  }
+#disabledSelect {
+  margin-top: 45px;
+  font-size: 20px;
+  /* Ajusta el tamaño de fuente */
+  /* width: 300px; */
+  /* Ajusta el ancho del select */
+}
 
   .card {
     background-color:  rgb(245, 221, 189);
@@ -106,7 +116,15 @@ a {
     max-width: 100%;
   }
 
-  
+option{
+  color: rgba(141, 99, 99, 0.747);
+  font-family: inherit;
+}
+
+.form-select{
+  color: rgba(141, 99, 99, 0.747);
+  font-family: inherit;
+}
 
 
 
