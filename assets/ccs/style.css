@@ -4,8 +4,8 @@ body {
     flex-direction: column;
     align-items: auto;
     justify-content: auto;
-    height: 200vh;
-    overflow: auto;
+    height: 100vh;
+    /* overflow: hidden; */
     margin: 0;
 } 
 
@@ -65,7 +65,7 @@ a {
 
 
   .navbar {
-    font-size: 20px; /* Tamaño de fuente deseado */
+    font-size: 20px; 
   }
 
 .dropdown-menu{
@@ -98,7 +98,6 @@ a {
 
   .list-group-item{
     background-color: rgb(245, 221, 189);
-   
   }
 
   .horarioentrega{

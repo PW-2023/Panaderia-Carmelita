@@ -10,7 +10,7 @@ body {
 
 #container-formulario {
     background-color: rgba(170, 113, 113, 0.4);
-    padding: 20px 10%;
+    padding: auto;
     border-radius: 5px;
 }
 
@@ -51,7 +51,7 @@ body {
 
 .form-control {
     position: relative;
-    margin: 20px 0 40px;
+    margin: auto;
     width: 250px;
 }
 
@@ -110,7 +110,7 @@ body {
 
 .navbar {
     font-size: 20px;
-    /* Tamaño de fuente deseado */
+    
 }
 
 .bd-navbar::after {
