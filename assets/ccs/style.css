@@ -125,5 +125,29 @@ option{
   font-family: inherit;
 }
 
+.quienesomos {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .img-normalizada{
+    width:auto;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .container.somos {
+    width: 96%;
+    max-width: 960px;
+    margin: 0 auto;
+    }
+    .img-normalizada {
+    width: 50%;
+    height: 10%;
+    }
+
+    .parrafosdescripcionnosotros{
+      font-weight: bold;
+    }
 
 
