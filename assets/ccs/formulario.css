@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-/* {
+*{
     box-sizing: border-box;
+}
+
+/* #date{
+    box-sizing: border-box; 
+    height:420px;
+     width: auto;
 } */
 
 body {
@@ -10,13 +16,13 @@ body {
 
 #container-formulario {
     background-color: rgba(170, 113, 113, 0.4);
-    padding: auto;
+    padding: 20px 40px;
     border-radius: 5px;
 }
 
 #container-formulario h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px 40px;
     color:rgba(141, 99, 99, 0.747);
 }
 
@@ -52,7 +58,7 @@ body {
 .form-control {
     position: relative;
     margin: auto;
-    width: 250px;
+    width: 300px;
 }
 
 .form-control input {
@@ -61,7 +67,7 @@ body {
     border-bottom: 2px #020202 solid;
     display: block;
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 20px;
     color: rgba(141, 99, 99, 0.747);
 }
@@ -74,7 +80,7 @@ body {
     display: block;
     width: 100%;
     padding: 0;
-    font-size: 15px;
+    font-size: 20px;
     color: rgba(141, 99, 99, 0.747);
 }
 
