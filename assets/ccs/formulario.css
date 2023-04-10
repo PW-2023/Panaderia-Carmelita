@@ -14,6 +14,12 @@ body {
     background-color: antiquewhite;
 } 
 
+/* .container{
+    width: auto;
+    max-width: auto;
+    margin: 0 auto;
+    } */
+
 #container-formulario {
     background-color: rgba(170, 113, 113, 0.4);
     padding: 20px 40px;
@@ -57,13 +63,13 @@ body {
 
 .form-control {
     position: relative;
-    margin: auto;
+    margin: 20px 0 40px;
     width: 300px;
 }
 
 .form-control input {
     background-color: transparent;
-    border: 0;
+    margin: auto;
     border-bottom: 2px #020202 solid;
     display: block;
     width: 100%;
@@ -92,6 +98,7 @@ body {
 
 .form-control label {
     position: absolute;
+    margin: auto;
     top: 20px;
     left: 5;
     pointer-events: none;
