@@ -1,158 +1,165 @@
 body {
-    background-color: antiquewhite;
-    display: flexbox;
-    flex-direction: column;
-    align-items: auto;
-    justify-content: auto;
-    height: 100vh;
-    /* overflow: hidden; */
-    margin: 0;
+  background-color: antiquewhite;
+  display: flexbox;
+  flex-direction: column;
+  align-items: auto;
+  justify-content: auto;
+  height: 100vh;
+  /* overflow: hidden; */
+  margin: 0;
 } 
 
 a {
-    font-weight: bold;
-    
+  font-weight: bold;
+  
 }
 
 #barraindex {
-    background-color: rgb(239, 151, 119);
-    
+  background-color: rgb(239, 151, 119);
+  
 }
 
 
 #carouselExampleCaptions{
-    transform: scale(1);
-    transition: transform .2s ease-in-out;
+  transform: scale(1);
+  transition: transform .2s ease-in-out;
 }
 
 .bd-navbar::after {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    display: block;
-    content: "";
-    background-image: linear-gradient(rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  content: "";
+  background-image: linear-gradient(rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
 }   
 
 .slide img{
-    height: 120vh;
+  height: 120vh;
 }
 
 
 .navbar-custom {
-    background-color: rgb(239, 151, 119);
+  background-color: rgb(239, 151, 119);
 }
 
 #nombre {
-    font-style: italic;
-        
-  }
+  font-style: italic;
+      
+}
 
-  .card-link{
-    float: right;
-    line-height: 35px;
-    font-size: 30px;
-    color:black;
-    
-  }
-  .card-link1{
-    font-size: 30px;
-    float: left;
-    line-height: 35px;
-    color:black;
-    
-  }
+.card-link{
+  float: right;
+  line-height: 35px;
+  font-size: 30px;
+  color:black;
+  
+}
+.card-link1{
+  font-size: 30px;
+  float: left;
+  line-height: 35px;
+  color:black;
+  
+}
 
 
-  .navbar {
-    font-size: 20px; 
-  }
+.navbar {
+  font-size: 20px; 
+}
 
 .dropdown-menu{
-  background-color:  rgb(245, 221, 189);
-    
+background-color:  rgb(245, 221, 189);
+  
 } 
 
 
 .titulo{
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #disabledSelect {
-  margin-top: 45px;
-  font-size: 20px;
-  /* Ajusta el tamaño de fuente */
-  /* width: 300px; */
-  /* Ajusta el ancho del select */
+margin-top: 45px;
+font-size: 20px;
+/* Ajusta el tamaño de fuente */
+/* width: 300px; */
+/* Ajusta el ancho del select */
 }
 
-  .card {
-    background-color:  rgb(245, 221, 189);
-    
+.card {
+  background-color:  rgb(245, 221, 189);
+  
 
-  }
-  .card-img-top{
-    border-color:black;
-    border-width: 20px;
-  }
+}
+.card-img-top{
+  border-color:black;
+  border-width: 20px;
+}
 
-  .list-group-item{
-    background-color: rgb(245, 221, 189);
-  }
+.list-group-item{
+  background-color: rgb(245, 221, 189);
+}
 
-  .horarioentrega{
-    font-weight: bold;
-  }
+.horarioentrega{
+  font-weight: bold;
+}
 
-  #familia{
-    text-align: center;
-    font-weight: bold;
-  }
+#familia{
+  text-align: center;
+  font-weight: bold;
+}
 
-  .card-img-center {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-  }
+.card-img-center {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
 option{
-  color: rgba(141, 99, 99, 0.747);
-  font-family: inherit;
+color: rgba(141, 99, 99, 0.747);
+font-family: inherit;
 }
 
 .form-select{
-  color: rgba(141, 99, 99, 0.747);
-  font-family: inherit;
+color: rgba(141, 99, 99, 0.747);
+font-family: inherit;
 }
 
 .quienesomos {
-    text-align: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+.img-normalizada{
+  width:auto;
+  height: 600px;
+  object-fit: cover;
+}
+
+.container.somos {
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
+  }
+  .img-normalizada {
+  width: 50%;
+  height: 10%;
+  }
+
+  .parrafosdescripcionnosotros{
     font-weight: bold;
   }
 
-  .img-normalizada{
-    width:auto;
-    height: 600px;
-    object-fit: cover;
+
+  .list-group-item{
+    font-weight: bold;
   }
 
-  .container.somos {
-    width: 96%;
-    max-width: 960px;
-    margin: 0 auto;
-    }
-    .img-normalizada {
-    width: 50%;
-    height: 10%;
-    }
-
-    .parrafosdescripcionnosotros{
-      font-weight: bold;
-    }
 
 #carrito{
-  width: 50px;
-      margin-left: 50px;
-    }
-    
+width: 50px;
+    margin-left: 50px;
+  }
+  
+
 
