@@ -161,5 +161,16 @@ width: 50px;
     margin-left: 50px;
   }
   
+  .arriba {
+    
+    position: fixed;
+    bottom: 10px;/*arriba*/
+    right: 10px;
+    z-index: 999; /* para mover objetos en eje z , osea sobre el codigo con una posicion fixeada*/
+    font-size: 30px; /* Ajusta el tamaño del icono  */
+    color: #000; /* Ajusta el color */
+    
+  }
+
 
 
