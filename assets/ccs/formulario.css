@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -12,7 +12,7 @@
 
 body {
     background-color: antiquewhite;
-} 
+}
 
 /* .container{
     width: auto;
@@ -29,7 +29,7 @@ body {
 #container-formulario h1 {
     text-align: center;
     margin-bottom: 20px 40px;
-    color:rgba(141, 99, 99, 0.747);
+    color: rgba(141, 99, 99, 0.747);
 }
 
 #container-formulario a {
@@ -78,7 +78,7 @@ body {
     color: rgba(141, 99, 99, 0.747);
 }
 
-.form-control textarea{
+.form-control textarea {
     background-color: transparent;
     border: 2px #a18383 solid;
     border-radius: 5px;
@@ -123,7 +123,7 @@ body {
 
 .navbar {
     font-size: 20px;
-    
+
 }
 
 .bd-navbar::after {
@@ -135,9 +135,7 @@ body {
     background-image: linear-gradient(rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
 }
 
-::placeholder{
+::placeholder {
     color: rgba(141, 99, 99, 0.747);
     font-family: inherit;
 }
-
-
