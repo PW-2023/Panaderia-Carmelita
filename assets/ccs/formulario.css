@@ -1,141 +1,95 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
-* {
-    box-sizing: border-box;
+html{
+    /* background: url("background.jpg") no-repeat; */
+	background-size: cover;
+    min-height: 100%;
 }
 
-/* #date{
-    box-sizing: border-box; 
-    height:420px;
-     width: auto;
-} */
-
-body {
+body{
+    background:none;
     background-color: antiquewhite;
 }
 
-/* .container{
-    width: auto;
-    max-width: auto;
-    margin: 0 auto;
-    } */
-
-#container-formulario {
+#formulario-3{
     background-color: rgba(170, 113, 113, 0.4);
-    padding: 20px 40px;
-    border-radius: 5px;
-}
-
-#container-formulario h1 {
-    text-align: center;
-    margin-bottom: 20px 40px;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
     color: rgba(141, 99, 99, 0.747);
+    border-radius: 10px;
 }
 
-#container-formulario a {
-    text-decoration: none;
-    color: rgba(209, 0, 0, 0.4);
+#formulario-3 h2{
+    padding-bottom: 20px;
+    margin: 10px 20px;
+    font-size: 24px;
 }
 
-.btn {
-    cursor: pointer;
-    display: inline-block;
-    width: 100%;
-    background: antiquewhite;
-    padding: 15px;
-    font-family: inherit;
-    font-size: 16px;
-    border: 0;
-    border-radius: 5px;
+#formulario-3 hr{
+    margin-top: 38px;
+    margin-bottom: 54px;
+    margin-left:3px;
+    border: 1px solid #cccccc;
+
 }
 
-.btn:focus {
-    outline: 0;
+#formulario-3 .form-group{
+	margin-bottom: 20px;
+    margin-left:20px;
+	width: 30%;
+    float:left;
+    text-align: left;
 }
 
-.btn:active {
-    transform: scale(0.98);
+.form-group input {
+    background-color: antiquewhite;
 }
 
-.text {
+#formulario-3 .form-group{
+    padding: 12px 20px;
+    height: auto;
+    border-radius: 2px;
+}
+
+#formulario-3 .radio-inline{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#formulario-3 .gender{
+    width: 30%;
     margin-top: 30px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.form-control {
-    position: relative;
-    margin: 20px 0 40px;
-    width: 300px;
-}
-
-.form-control input {
-    background-color: transparent;
-    margin: auto;
-    border-bottom: 2px #020202 solid;
+#formulario-3 .btn{
+    width: 50%;
+    margin: 20px auto 0;
     display: block;
-    width: 100%;
-    padding: 10px 0;
-    font-size: 20px;
-    color: rgba(141, 99, 99, 0.747);
-}
-
-.form-control textarea {
-    background-color: transparent;
-    border: 2px #a18383 solid;
-    border-radius: 5px;
     outline: none;
-    display: block;
-    width: 100%;
-    padding: 0;
-    font-size: 20px;
+    background-color: antiquewhite;
     color: rgba(141, 99, 99, 0.747);
 }
 
-.form-control input:focus,
-.form-control input:valid {
-    outline: 0;
-    border-bottom-color: rgba(209, 0, 0, 0.4);
+@media screen and (max-width: 800px){
+    #formulario-3 .form-group{
+        width: 45%;
+    }
+
+    #formulario-3{
+        margin-top: 0;
+    }
 }
 
-.form-control label {
-    position: absolute;
-    margin: auto;
-    top: 20px;
-    left: 5;
-    pointer-events: none;
+@media screen and (max-width: 560px){
+    #formulario-3 .form-group{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #formulario-3 h2{
+        text-align: center;
+    }
 }
 
-.form-control label span {
-    display: inline-block;
-    /* font-size: 18px; */
-    min-width: 5px;
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.form-control input:focus+label span,
-.form-control input:valid+label span {
-    color: rgba(141, 99, 99, 0.747);
-    transform: translateY(-30px);
-}
-
-.navbar-custom {
-    background-color: rgb(239, 151, 119);
-}
-
-.navbar {
-    font-size: 20px;
-
-}
-
-.bd-navbar::after {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    display: block;
-    content: "";
-    background-image: linear-gradient(rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
-}
-
-::placeholder {
-    color: rgba(141, 99, 99, 0.747);
-    font-family: inherit;
-}
