@@ -1,5 +1,5 @@
 function loadData() {
-    const url = "http://192.168.1.147:5501/assets/data1.json";
+    const url = "http://192.168.1.173:5501/assets/data1.json";
     /* INVOCACIÓN DATA JSON */
     const resp = fetch(url)
         .then((response) => {
