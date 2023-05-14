@@ -1,5 +1,5 @@
 function loadData() {
-    const url = "http://192.168.1.147:5501/assets/data1.json";
+    const url = "https://pw-2023.github.io/assets/json/data1.json";
     /* INVOCACIÓN DATA JSON */
     const resp = fetch(url)
         .then((response) => {
