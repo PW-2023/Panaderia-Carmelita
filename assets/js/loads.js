@@ -52,7 +52,7 @@ function loadData() {
 
             // VALIDO QUE NO HAYA UNA FILA ABIERTA
             if (count !== 0) {
-                cards += '</div>';
+                cards += '</div>'; //el +- cuando lo usamos en las variables se utiliza para ir actualizando, asi actualizo cuando la condicion se cumple 
             }
 
             var cardsHTML = document.getElementById("cards");
