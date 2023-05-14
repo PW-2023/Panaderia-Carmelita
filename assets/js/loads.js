@@ -1,5 +1,5 @@
 function loadData() {
-    const url = "https://pw-2023.github.io/assets/json/data1.json";
+    const url = "https://pw-2023.github.io/Panaderia-Carmelita/assets/json/data1.json";
     /* INVOCACIÓN DATA JSON */
     const resp = fetch(url)
         .then((response) => {

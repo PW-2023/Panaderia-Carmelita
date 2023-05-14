@@ -1,12 +1,12 @@
 function loadData() {
-  const url = "http://127.0.0.1:5500/assets/json/data.json";
+  const url = "https://pw-2023.github.io/Panaderia-Carmelita/assets/json/data.json";
   const response = fetch(url)
     .then((response) => {
       /*VALIDACION RESPUESTA RECURSO*/
       if (response.ok) {
         console.log("response.text:", response.text);
         return response.text();
-      } else {
+      } else {  
         console.log("response.status ", response.status);
         throw new Error(response.status);
       }
