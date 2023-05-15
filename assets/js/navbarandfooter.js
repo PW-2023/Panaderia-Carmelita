@@ -33,6 +33,10 @@ function loadCustomNavbar() {
       <li class="nav-item">
         <a class="nav-link" href="../html/quienessomos.html">Quienes Somos</a>
       </li>
+
+    
+    
+
     </ul>
     <div>
     <button type="button" onclick="location.href='../html/login.html'">Registrarse</button>
@@ -72,6 +76,7 @@ function loadCustomFooter() {
       </ul>
     </div>
     <div class="col-lg-4 col-md-6 ">
+    
       <h5 class="text text-light mb-4">SÍGUENOS EN REDES SOCIALES</h5>
       <ul class="list-unstyled mb-0">
         <li class="mb-2"><a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a><span
@@ -85,14 +90,30 @@ function loadCustomFooter() {
     </div>
   </div>
 </div>
+<br>
+
 <div class="container text-center">
+
+<label for="fecha">Dolar por fecha</label>
+<input type="date" id="fecha" name="fecha">
+<button type="button" onclick="dolarHoy()">Buscar</button>
+
   <hr class="bg-light my-5">
+  <div class="uf-container">
+  <p id="datos-uf"></p>
+  <p id="datos-uf2"></p>
+</div>
+
   <p class="mb-0 text-light">&copy; 2023 Panaderia Carmelita. Todos los derechos reservados.</p>
   <p class="mb-0 text-light">Información Legal</p>
   <p class="mb-0 text-light">Términos y Condiciones de Uso</p>
   <p class="mb-0 text-light">Política de Privacidad</p>
+  
+  
 </div>
+
 </footer>`;
+
 
   var customFoterHTML = document.getElementById("custom-footer");
   customFoterHTML.innerHTML = customFooter;
