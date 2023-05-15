@@ -26,7 +26,7 @@ function loadData() {
             //   const valor = objeto.valor.toFixed(2);
             //   console.log(`Fecha: ${ fecha }, Valor: ${ valor } `);
             // }
-            console.log(fecha);
+
         })
         .catch(function (error) {
             console.log(error);
