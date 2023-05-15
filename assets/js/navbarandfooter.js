@@ -34,6 +34,9 @@ function loadCustomNavbar() {
         <a class="nav-link" href="../html/quienessomos.html">Quienes Somos</a>
       </li>
     </ul>
+    <div>
+    <button type="button" onclick="location.href='../html/login.html'">Registrarse</button>
+    </div>
     <div id="carrito">
       <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
     </div>

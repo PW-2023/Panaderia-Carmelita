@@ -1,46 +1,45 @@
 html {
-    /* background: url("background.jpg") no-repeat; */
-    background-size: cover;
-    min-height: 100%;
+  /* background: url("background.jpg") no-repeat; */
+  background-size: cover;
+  min-height: 100%;
 }
 
 body {
-    background: none;
-    background-color: antiquewhite;
+  background: none;
+  background-color: #faebd7;
 }
 
 #formulario-3 {
-    background-color: rgba(170, 113, 113, 0.4);
-    max-width: 800px;
-    margin: auto;
-    padding: 40px;
-    color: rgba(141, 99, 99, 0.747);
+  background-color: rgba(170, 113, 113, 0.4);
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  color: rgba(141, 99, 99, 0.747);
 }
 
 #formulario-3 h2 {
-    padding-bottom: 20px;
-    margin: 10px 20px;
-    font-size: 24px;
+  padding-bottom: 20px;
+  margin: 10px 20px;
+  font-size: 24px;
 }
 
 #formulario-3 hr {
-    margin-top: 38px;
-    margin-bottom: 54px;
-    margin-left: 3px;
-    border: 1px solid #cccccc;
-
+  margin-top: 38px;
+  margin-bottom: 54px;
+  margin-left: 3px;
+  border: 1px solid #cccccc;
 }
 
 #formulario-3 .form-group {
-    margin-bottom: 20px;
-    margin-left: 20px;
-    width: 30%;
-    float: left;
-    text-align: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: 30%;
+  float: left;
+  text-align: left;
 }
 
 .form-group input {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
 
 /* .form-group input:focus,
@@ -64,49 +63,49 @@ body {
 } */
 
 #formulario-3 .form-group {
-    padding: 12px 20px;
-    height: auto;
-    border-radius: 2px;
+  padding: 12px 20px;
+  height: auto;
+  border-radius: 2px;
 }
 
 #formulario-3 .radio-inline {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #formulario-3 .gender {
-    width: 30%;
-    margin-top: 30px;
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  width: 30%;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 #formulario-3 .btn {
-    width: 36%;
-    margin: 20px auto 0;
-    display: block;
-    outline: none;
-    background-color: antiquewhite;
+  width: 36%;
+  margin: 20px auto 0;
+  display: block;
+  outline: none;
+  background-color: antiquewhite;
 }
 
 @media screen and (max-width: 800px) {
-    #formulario-3 .form-group {
-        width: 45%;
-    }
+  #formulario-3 .form-group {
+    width: 45%;
+  }
 
-    #formulario-3 {
-        margin-top: 0;
-    }
+  #formulario-3 {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 560px) {
-    #formulario-3 .form-group {
-        width: 100%;
-        margin-left: 0;
-    }
+  #formulario-3 .form-group {
+    width: 100%;
+    margin-left: 0;
+  }
 
-    #formulario-3 h2 {
-        text-align: center;
-    }
+  #formulario-3 h2 {
+    text-align: center;
+  }
 }
