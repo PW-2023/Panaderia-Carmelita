@@ -1,4 +1,3 @@
-
 function loadCustomNavbar() {
   var customNavBar = `
 
@@ -24,6 +23,9 @@ function loadCustomNavbar() {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../html/quienessomos.html">Quienes Somos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../html/mapa.html">Visitanos</a>
       </li>
 
     
@@ -52,13 +54,9 @@ function loadCustomFooter() {
     <div class="col-lg-4 col-md-6 mb-4 mb-md-0 ">
       <h5 class="text-light mb-4">CONTACTO</h5>
       <ul class="list-unstyled mb-0">
-        <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Calle la Merced 589, Putaendo</li>
+        <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Manuel Montt 1687, Temuco</li>
         <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i>panaderiacarmelita@gmail.com</li>
-        <li><i class="bi bi-telephone-fill me-2"></i>999999999</li>
-        
-        <br>
-        <li ><button id="contactanos" >
-        <a class="nav-link" href="">CONTACTANOS</a></button></li>
+        <li><i class="bi bi-telephone-fill me-2"></i>+56942018770</li>
       </ul>
     </div>
 
@@ -77,10 +75,10 @@ function loadCustomFooter() {
       <ul class="list-unstyled mb-0">
         <li class="mb-2"><a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a><span
             class="text-light">@panaderiacarmelita</span></li>
-        <li class="mb-2"><a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a><span
-            class="text-light">/panaderiacarmelita</span></li>
-        <li><a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a><span
-            class="text-light">@panaderiacarmelita</span></li>
+        <li class="mb-2"><a href="https://web.facebook.com/people/Panaderia-y-Churrasqueria-La-Carmelita/100057595233262/?_rdc=1&_rdr" class="text-light me-3"><i class="bi bi-facebook"></i></a><span
+            class="text-light">/Panaderia-y-Churrasqueria-La-Carmelita</span></li>
+        <li><a href="https://www.instagram.com/panaderialacarmelita/" class="text-light me-3"><i class="bi bi-instagram"></i></a><span
+            class="text-light">@panaderialacarmelita</span></li>
 
       </ul>
     </div>
@@ -90,14 +88,12 @@ function loadCustomFooter() {
 
 <div class="container text-center">
 
-
-
-  <hr class="bg-light my-5">
-  <div class="uf-container">
-  <label for="fecha">Dolar por fecha</label>
+<label for="fecha">Dolar por fecha</label>
 <input type="date" id="fecha" name="fecha">
 <button type="button" onclick="dolarHoy()">Buscar</button>
 
+  <hr class="bg-light my-5">
+  <div class="uf-container">
   <p id="datos-uf"></p>
   <p id="datos-uf2"></p>
 </div>
