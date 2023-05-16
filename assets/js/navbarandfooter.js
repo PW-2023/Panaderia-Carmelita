@@ -19,15 +19,6 @@ function loadCustomNavbar() {
         <a class="nav-link" href="../html/productos.html">Productos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../html/productos.html#menupanes">Panes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../html/productos.html#menudulces">Tentaciones Dulces</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../html/productos.html#menuempanadas">Empanadas</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link " aria-current="page" href="../html/formulario2.html">Haz tu pedido</a>
       </li>
       <li class="nav-item">
