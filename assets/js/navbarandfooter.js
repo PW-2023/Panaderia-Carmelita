@@ -1,3 +1,4 @@
+
 function loadCustomNavbar() {
   var customNavBar = `
 
@@ -54,6 +55,10 @@ function loadCustomFooter() {
         <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Calle la Merced 589, Putaendo</li>
         <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i>panaderiacarmelita@gmail.com</li>
         <li><i class="bi bi-telephone-fill me-2"></i>999999999</li>
+        
+        <br>
+        <li ><button id="contactanos" >
+        <a class="nav-link" href="">CONTACTANOS</a></button></li>
       </ul>
     </div>
 
@@ -85,12 +90,14 @@ function loadCustomFooter() {
 
 <div class="container text-center">
 
-<label for="fecha">Dolar por fecha</label>
-<input type="date" id="fecha" name="fecha">
-<button type="button" onclick="dolarHoy()">Buscar</button>
+
 
   <hr class="bg-light my-5">
   <div class="uf-container">
+  <label for="fecha">Dolar por fecha</label>
+<input type="date" id="fecha" name="fecha">
+<button type="button" onclick="dolarHoy()">Buscar</button>
+
   <p id="datos-uf"></p>
   <p id="datos-uf2"></p>
 </div>

@@ -82,6 +82,7 @@ a {
 
 .card {
   background-color: rgb(245, 221, 189);
+  left: 12px;
 }
 
 .card-img-top {
@@ -151,17 +152,16 @@ option {
 #carrito {
   width: 50px;
   margin-left: 50px;
+  cursor: pointer;
 }
 
-.arriba {
-  position: fixed;
-  bottom: 10px;
-  /*arriba*/
-  right: 10px;
-  z-index: 999;
-  /* para mover objetos en eje z , osea sobre el codigo con una posicion fixeada*/
-  font-size: 30px;
-  /* Ajusta el tamaño del icono  */
-  color: #000;
-  /* Ajusta el color */
+/*BOTON CONTACTANOS , PROXIMO FORMULARIO*/
+#contactanos {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#contactanos a {
+  color: inherit;
+  text-decoration: none;
 }
