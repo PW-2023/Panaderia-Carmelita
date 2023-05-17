@@ -4,7 +4,7 @@ function loadCustomNavbar() {
 <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
 <div class="container-fluid">
   <p class="text-center font-weight-bold"><img style="width: 100px; margin-top: 15px;"
-      src="../img/logopanaderia.png" alt=""></p>
+      src="../img/logovieja.png" alt=""></p>
   <a class="navbar-brand" href="#" id="nombre"></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,12 +24,12 @@ function loadCustomNavbar() {
       <li class="nav-item">
         <a class="nav-link" href="../html/quienessomos.html">Quienes Somos</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../html/mapa.html">Visitanos</a>
-      </li>
+      <br>
+      <br>
 
 
-
+    
+    
 
     </ul>
     <div>
@@ -58,8 +58,11 @@ function loadCustomFooter() {
         <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i>panaderiacarmelita@gmail.com</li>
         <li><i class="bi bi-telephone-fill me-2"></i>+56942018770</li>
         <br>
-        <li><button id="contactanos"><a href="../html/formulario2.0.html">CONTACTANOS</a></button></li>      
-      </ul>
+        <li><button id="contactanos"><a href="../html/formulario2.0.html">CONTACTANOS</a></button></li>
+        </ul>
+        <br>
+        <br>
+
     </div>
 
     <div class="col-lg-4 col-md-6 mb-4 mb-md-0 ">
@@ -69,11 +72,10 @@ function loadCustomFooter() {
           22:00</li>
         <li class="mb-2"><i class="bi bi-clock me-2"></i><span class="text-light">Sábados:</span> 08:00 - 21:00</li>
         <li><i class="bi bi-clock me-2"></i><span class="text-light">Domingos:</span> 07:00 - 17:00</li>
-        
-        </ul>
+      </ul>
     </div>
     <div class="col-lg-4 col-md-6 ">
-
+    
       <h5 class="text text-light mb-4">SÍGUENOS EN REDES SOCIALES</h5>
       <ul class="list-unstyled mb-0">
         <li class="mb-2"><a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a><span
@@ -89,31 +91,29 @@ function loadCustomFooter() {
 </div>
 <br>
 
-
-
 <div class="container text-center">
 
-<hr class="bg-light my-5">
 
-<label for="fecha">Dolar por fecha</label>
+
+  <hr class="bg-light my-5">
+  <label for="fecha">Dolar por fecha</label>
 <input type="date" id="fecha" name="fecha">
 <button type="button" onclick="dolarHoy()">Buscar</button>
-  
-  
   <div class="uf-container">
-  
+
   <p id="datos-uf"></p>
-  <hr class="bg-light my-5">  
-  <p id="datos-uf2"></p>
   <hr class="bg-light my-5">
+
+  <p id="datos-uf2"></p>
 </div>
+<hr class="bg-light my-5">
 
   <p class="mb-0 text-light">&copy; 2023 Panaderia Carmelita. Todos los derechos reservados.</p>
   <p class="mb-0 text-light">Información Legal</p>
   <p class="mb-0 text-light">Términos y Condiciones de Uso</p>
   <p class="mb-0 text-light">Política de Privacidad</p>
-
-
+  
+  
 </div>
 
 </footer>`;
@@ -123,6 +123,11 @@ function loadCustomFooter() {
   customFoterHTML.innerHTML = customFooter;
 }
 loadCustomFooter();
+
+
+
+
+
 
 
 
