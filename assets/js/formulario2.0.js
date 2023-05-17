@@ -21,7 +21,7 @@ $(document).ready(function () {
     window.addEventListener(
         "load",
         function () {
-            var form = document.getElementById("formulario");
+            var form = document.getElementById("formulariocontac");
             form.addEventListener(
                 "submit",
                 function (event) {
@@ -39,37 +39,37 @@ $(document).ready(function () {
 })();
 
 // Envío del formulario
-$("#formulario").submit(function (event) {
+$("#formulariocontac").submit(function (event) {
     event.preventDefault();
-    var nombre = $("#nombre").val();
-    var email = $("#email").val();
-    var telefono = $("#telefono").val();
-    var mensaje = $("#mensaje").val();
+    var nombre = $("#nombrecontac").val();
+    var email = $("#emailcontac").val();
+    var telefono = $("#telefonocontac").val();
+    var mensaje = $("#mensajecontac").val();
 
     // Validación adicional
-    if (nombre === "" || email === "" || telefono === "") {
+    if (nombre === "" || email === "" || telefono === 0) {
         Swal.fire({
             icon: "error",
             title: "Campos obligatorios",
             text: "Por favor, complete todos los campos obligatorios",
         });
         return false;
+    } else {
+        Swal.fire({
+            icon: "success",
+            title: "Confirmación",
+            text: "Formulario enviado correctamente",
+        });
+
+        // Aquí puedes agregar el código para enviar el formulario por AJAX
+        // ...
+
+        // Alerta de éxito
+
+
+        // Limpiar formulario
+        $("#formulariocontac")[0].reset();
+        $("input, textarea").prev().removeClass("active");
+        $("#formulariocontac").removeClass("was-validated");
     }
-
-    // Aquí puedes agregar el código para enviar el formulario por AJAX
-    // ...
-
-    // Alerta de éxito
-    Swal.fire({
-        icon: "success",
-        title: "¡Enviado!",
-        text: "Gracias por contactarnos",
-        showConfirmButton: false,
-        timer: 3000,
-    });
-
-    // Limpiar formulario
-    $("#formulario")[0].reset();
-    $("input, textarea").prev().removeClass("active");
-    $("#formulario").removeClass("was-validated");
 });

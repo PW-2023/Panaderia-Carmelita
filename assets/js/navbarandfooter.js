@@ -61,10 +61,7 @@ function loadCustomFooter() {
         <li><button id="contactanos"><a href="../html/formulario2.0.html">CONTACTANOS</a></button></li>
         </ul>
         <br>
-        <br>
-
     </div>
-
     <div class="col-lg-4 col-md-6 mb-4 mb-md-0 ">
       <h5 class="text-light mb-4">HORARIO DE ATENCIÓN</h5>
       <ul class="list-unstyled mb-0">
@@ -89,11 +86,8 @@ function loadCustomFooter() {
     </div>
   </div>
 </div>
-<br>
 
 <div class="container text-center">
-
-
 
   <hr class="bg-light my-5">
   <label for="fecha">Dolar por fecha</label>

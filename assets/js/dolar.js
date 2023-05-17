@@ -56,7 +56,7 @@ function dolarHoy() {
                     console.log("Moneda: ", objJson.unidad_medida);
                     console.log("Fecha: ", fecha_final);
                     console.log("Valor: $", objJson.serie[i].valor);
-                    dolar = `   <br>
+                    dolar = `  <br>
                                 <p>Nombre: ${objJson.nombre}</p>
                                 <p>Moneda: ${objJson.unidad_medida}</p>
                                 <p>Fecha: ${fecha_final}</p>
