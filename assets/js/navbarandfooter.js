@@ -57,9 +57,11 @@ function loadCustomFooter() {
         <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Manuel Montt 1687, Temuco</li>
         <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i>panaderiacarmelita@gmail.com</li>
         <li><i class="bi bi-telephone-fill me-2"></i>+56942018770</li>
-        <br>
         <li><button id="contactanos"><a href="../html/formulario2.0.html">CONTACTANOS</a></button></li>
-      </ul>
+        </ul>
+        <br>
+        <br>
+
     </div>
 
     <div class="col-lg-4 col-md-6 mb-4 mb-md-0 ">
@@ -99,6 +101,7 @@ function loadCustomFooter() {
   <div class="uf-container">
 
   <p id="datos-uf"></p>
+  <hr class="bg-light my-5">
   <hr class="bg-light my-5">
   <p id="datos-uf2"></p>
 </div>
