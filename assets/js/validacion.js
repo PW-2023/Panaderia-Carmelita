@@ -48,7 +48,7 @@ function checkInputs() {
 	if (emailValue === '') {
 		setErrorFor(email, 'El Email es de cracter obligatorio');
 		validador = false;
-	} else if (!isEmail(emailValue)) {
+	} else if (!validateEmail(email)) {
 		setErrorFor(email, 'No ingreso un email válido');
 		validador = false;
 	} else {
@@ -90,9 +90,33 @@ function setSuccessFor(input) {
 
 }
 
-function isEmail(email) {
+/*function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-};
+};*/
+
+/*function isEmail(email) {
+	var regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+	return regex.test(email);
+  }*/
+
+
+  function validateEmail(inputText)
+  {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(inputText.value.match(mailformat))
+  {
+  
+  document.form1.text1.focus();
+  return true;
+  }
+  else
+  {
+
+  document.form1.text1.focus();
+  return false;
+  }
+  }
+
 
 //------------------------------------------------------------------------------
 
