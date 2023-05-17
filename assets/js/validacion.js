@@ -45,16 +45,7 @@ function checkInputs() {
 		setSuccessFor(usuario);
 		validador = true;
 	}
-	if (emailValue === '') {
-		setErrorFor(email, 'El Email es de cracter obligatorio');
-		validador = false;
-	} else if (!validateEmail(email)) {
-		setErrorFor(email, 'No ingreso un email válido');
-		validador = false;
-	} else {
-		setSuccessFor(email);
-		validador = true;
-	}
+	
 
 	if (passwordValue === '') {
 		validador = false;
@@ -75,7 +66,24 @@ function checkInputs() {
 		setSuccessFor(password2);
 		validador = true;
 	}
+	if (emailValue === '') {
+		setErrorFor(email, 'El Email es de cracter obligatorio');
+		validador = false;
+	} else if (!validateEmail(email)) {
+		setErrorFor(email, 'No ingreso un email válido');
+		validador = false;
+	} else {
+		setSuccessFor(email);
+		validador = true;
+	}
 }
+
+	/*if (nombreValue != '' && apellidoValue != '' && usuarioValue != '' && passwordValue != '' && password2Value != '' 
+	&& passwordValue === password2Value && emailValue != '' && validateEmail(email)) {
+		validador = true;
+	} else {
+		validador = false;
+	}*/
 
 function setErrorFor(input, message) {
 	const formControl = input.parentElement;
