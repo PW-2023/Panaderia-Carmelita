@@ -47,7 +47,7 @@ $("#formulariocontac").submit(function (event) {
     var mensaje = $("#mensajecontac").val();
 
     // Validación adicional
-    if (nombre === "" || email === "" || telefono === 0) {
+    if (nombre === "" || email === "" || telefono === 0|| mensaje === "") {
         Swal.fire({
             icon: "error",
             title: "Campos obligatorios",
