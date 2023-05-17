@@ -19,11 +19,11 @@
 
 
 </head>
-<div id="custom-navbar"></div>
+
 <body id="loginbody">
 
 
-    
+    <div id="custom-navbar"></div>
     <br>
 
     <div class="container" id="formlogin" style="background-color: #f7f7f7;">
@@ -35,7 +35,7 @@
     </div>
     <br>
     <div class="container" id="formlogin">
-        <form action="../html/login.html" method="get" id="form" class="form">
+        <form action="../html/login.html" method="get" id="form" class="form" name="form1">
             <div class="form-control">
                 <label for="first-name">Nombre</label>
                 <input type="text" placeholder="Carmelita" id="nombre" />
@@ -59,8 +59,8 @@
                 <small>Error message</small>
             </div>
             <div class="form-control">
-                <label for="email">Email</label>
-                <input type="email" placeholder="@email.com" id="email" />
+                <label for="text">Email</label>
+                <input type="text" placeholder="@email.com" id="email" name="text1" />
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
                 <small>Error message</small>
@@ -82,7 +82,7 @@
 
 
 
-            <button type="submit">Enviar</button>
+            <button type="submit" onclick="validateEmail(document.form1.text1)">Enviar</button>
         </form>
 
         <div id="miModal" class="modal">
@@ -105,7 +105,6 @@
     <script src="../js/navbarandfooter.js"></script>
 
     <script src="../js/btnIp.js"></script>
-    <script src="../js/validacion.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/dolar.js"></script>
 
