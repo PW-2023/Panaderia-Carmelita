@@ -1,0 +1,15 @@
+.uf-box {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+.uf-box p:first-child {
+  margin-bottom: 5px;
+}
+
+#valor-uf {
+  font-weight: bold;
+}
