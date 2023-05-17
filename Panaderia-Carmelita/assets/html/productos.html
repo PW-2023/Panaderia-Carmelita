@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../ccs/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../ccs/btnup.css" />
+    <title>PANADERIA CARMELITA</title>
+  </head>
+
+  <body>
+    <div id="custom-navbar"></div>
+    <div id="cards" class="row"></div>
+    <!--IMAGENES DE PRODUCTOS
+  <div class="container">
+    <section id="menupanes">
+      <div class="row">
+        <div class="col-sm">
+          <div class="card my-3">
+            <img class="card-img-top" src="../img/pan de nuez.webp" alt="Pan Nuez" />
+            <div class="card-body">
+              <h5 class="card-title">Pan De Campo Nuez</h5>
+              <p class="card-text">
+                Pan de campo de masa madre con nueces molidas
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">$3.500</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+              <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card my-3">
+            <img class="card-img-top" src="../img/pan brioche.webp" alt="Pan Brioche" />
+            <div class="card-body">
+              <h5 class="card-title">Pan Brioche</h5>
+              <p class="card-text">
+                Esponjoso pan dulce hecho de huevo y leche
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">$3.000</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+              <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card my-3">
+            <img class="card-img-top" src="../img/pan de chocolate.webp" alt="Pan de Chocolate" />
+            <div class="card-body">
+              <h5 class="card-title">Pan De Chocolate</h5>
+              <p class="card-text">
+                Pan de masa madre dulce sabor chocolate
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">$3.500</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+              <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm"">
+            <div class=" card my-3">
+          <img class="card-img-top" src="../img/pan de centeno.webp" alt="Pan Centeno" />
+          <div class="card-body">
+            <h5 class="card-title">Pan De Centeno</h5>
+            <p class="card-text">
+              Pan de molde integral con semillas de centeno
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$3.000</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card my-3">
+        <img class="card-img-top" src="../img/integral masa madre.jpg" alt="Integral Masa Madre" />
+        <div class="card-body">
+          <h5 class="card-title">Pan Integral De Masa Madre</h5>
+          <p class="card-text">
+            Pan molde integral hecho de masa madre
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">$3.000</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+          <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card my-3">
+        <img class="card-img-top" src="../img/ciabatta aceituna.jpg" alt="Ciabatta Aceituna" />
+        <div class="card-body">
+          <h5 class="card-title">Pan Ciabatta con Aceituna</h5>
+          <p class="card-text">
+            Pan relleno con aceituna, hecho de masa madre
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">$2.500</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+          <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card my-3">
+        <img class="card-img-top" src="../img/pan de campo masa madre.jpg" alt="Campo Masa Madre" />
+        <div class="card-body">
+          <h5 class="card-title">Pan de Campo de Masa Madre</h5>
+          <p class="card-text">
+            Pan de campo 700grs. hecho con masa madre
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">$3.500</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+          <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-sm"">
+            <div class=" card my-3">
+      <img class="card-img-top" src="../img/masa madre linaza chia.jpg" alt="Masa Madre Linaza" />
+      <div class="card-body">
+        <h5 class="card-title">Pan Madre Linaza Y Chia</h5>
+        <p class="card-text">
+          Pan de campo 700grs. hecho de masa madre
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">$3.500</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+        <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <a href="#arriba" class="arriba">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </a>
+  </section>
+  <p></p>
+  <section id="menudulces">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/cheescake.webp" alt="Cheescake" />
+          <div class="card-body">
+            <h5 class="card-title">Cheescake Chocolate</h5>
+            <p class="card-text">
+              Cheescake de crema pastelera y de chocolate
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$2.500</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/tartaleta.webp" alt="Tartaleta" />
+          <div class="card-body">
+            <h5 class="card-title">Tartaleta Nuez</h5>
+            <p class="card-text">
+              Tartaleta de nuez masa crujiente y relleno de crema
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$2.500</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/medialuna.webp" alt="Medialunas" />
+          <div class="card-body">
+            <h5 class="card-title">Medialunas</h5>
+            <p class="card-text">
+              Medialunas contiene 6 unidades por porción
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$4.500</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm"">
+            <div class=" card my-3">
+        <img class="card-img-top" src="../img/pastrafola.webp" alt="Pastrafola" />
+        <div class="card-body">
+          <h5 class="card-title">Pastrafola</h5>
+          <p class="card-text">
+            Masa crujiente rellena con dulce de membrillo
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">$2.000</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+          <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/rollocanela.webp" alt="Cinnamon" />
+          <div class="card-body">
+            <h5 class="card-title">Cinnamon Roll</h5>
+            <p class="card-text">
+              Rollo de canela bañado en azucar glass
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$1.800</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/macarrone.webp" alt="Macarrons" />
+          <div class="card-body">
+            <h5 class="card-title">Macarons</h5>
+            <p class="card-text">
+              Galleta en base a huevos, harina de almendra y azúcar
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$1.500</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/palmeritas.webp" alt="Palmeritas" />
+          <div class="card-body">
+            <h5 class="card-title">Palmeritas</h5>
+            <p class="card-text">
+              Palmetas crujientes, y cubiertas por caramelo
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$1.000</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm"">
+            <div class=" card my-3">
+        <img class="card-img-top" src="../img/mufin de chocolate.webp" alt="Muffin Chocolate" />
+        <div class="card-body">
+          <h5 class="card-title">Muffin Chocolate</h5>
+          <p class="card-text">
+            Muffin de chocolate, con centro de chocolate
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">$1.900</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+          <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <p></p>
+  <section id="menuempanadas">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/empanada pastel de choclo.jpg" alt="Empanada Paste Choclo" />
+          <div class="card-body">
+            <h5 class="card-title">Empanada Sabor Pastel De Choclo</h5>
+            <p class="card-text">
+              Empanada de horno rellena con pastel de choclo
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$3.000</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/empanada pesto carme al jugo.jpg" alt="Empanada Carne Pesto" />
+          <div class="card-body">
+            <h5 class="card-title">Empanada Sabor Carne Al Jugo Pesto</h5>
+            <p class="card-text">
+              Empanada de horno sabor carne al jugo con pesto
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$3.000</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/empanada integral aceituna queso champiñon.jpg"
+            alt="Empanada Aceituna Champiñon Queso" />
+          <div class="card-body">
+            <h5 class="card-title">Empanada Integral Queso Champiñon</h5>
+            <p class="card-text">
+              Empanada integral sabor aceituna, queso champiñon
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$3.000</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm"">
+            <div class=" card my-3">
+        <img class="card-img-top" src="../img/empanada napolitana.jpg" alt="Empanada Napolitana Queso" />
+        <div class="card-body">
+          <h5 class="card-title">Empanada De Horno Napolitana Queso</h5>
+          <p class="card-text">
+            Empanada de horno sabor napotilana queso
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">$3.000</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+          <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/empanada1.webp" alt="Empanada Pino Merken" />
+          <div class="card-body">
+            <h5 class="card-title">Empanada De Horno Pino Merken</h5>
+            <p class="card-text">
+              Empanada de horno sabor pino con un poco de merkén
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$3.000</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/empanada pino.webp" alt="Empanada Pino" />
+          <div class="card-body">
+            <h5 class="card-title">Empanada De Horno Sabor Pino</h5>
+            <p class="card-text">
+              Empanada de horno sabor pino con carne picada
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$3.000</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card my-3">
+          <img class="card-img-top" src="../img/empanada.webp" alt="Empanada Granjera Queso" />
+          <div class="card-body">
+            <h5 class="card-title">Empanada De Horno Granjera Queso</h5>
+            <p class="card-text">
+              Empanada de horno granjera con queso
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$3.000</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm"">
+            <div class=" card my-3">
+        <img class="card-img-top" src="../img/empanada aji de gallina.webp" alt="Empanada Aji Gallina" />
+        <div class="card-body">
+          <h5 class="card-title">Empanada De Horno Ají De Gallina</h5>
+          <p class="card-text">
+            Empanada de horno sabor ají de gallina
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">$3.000</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+          <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <p></p>
+  </div>-->
+
+    <!--BOTON ARRIBA -->
+    <button class="btn-scrolltop" id="btn_scrolltop">
+      <i class="bi bi-arrow-up-square-fill"></i>
+    </button>
+
+    <footer id="custom-footer"></footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/navbarandfooter.js"></script>
+    <script src="../js/loads.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/dolar.js"></script>
+    <script src="../js/btnIp.js"></script>
+  </body>
+</html>
