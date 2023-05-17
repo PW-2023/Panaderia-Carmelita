@@ -24,6 +24,9 @@ function loadCustomNavbar() {
       <li class="nav-item">
         <a class="nav-link" href="../html/quienessomos.html">Quienes Somos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../html/mapa.html">Visitanos</a>
+      </li>
       <br>
       <br>
 
