@@ -1,0 +1,93 @@
+{% extends "base.html" %} {% load static %}
+{%block title%}QUIENES SOMOS{%endblock title%}
+{%block css%}<link rel="stylesheet" href="{%static 'ccs/bootstrap/style.css'%}">{%endblock css%}
+{% block content %}
+
+<section class="py-3">
+    <div class="container.somos">
+      <h2 class="text-center">Creación</h2>
+      <div class="text-center">
+        <p class="me-3 md-3">
+          La panaderia fue fundada en el año 1920 por Don Juan Díaz y Doña
+          Carmela Díaz, en cuyo honor se nombro la panaderia, siendo
+          trabajada por ellos hasta el año 1940
+        </p>
+        <p class="parrafosdescripcionnosotros">
+          (Don Juan junto a su esposa Carmela)
+        </p>
+        <img
+          src="{% static 'img/matrimoniopanadero.jpg' %} "
+          alt="Inicios panaderia"
+          class="img-normalizada"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="py-3">
+    <div class="container.somos">
+      <h2 class="text-center">Traspaso de mando</h2>
+      <div class="text-center">
+        <p class="me-3 md-3">
+          En el año 1941 El hijo mayor del matrimonio Don Manuel Díaz, se
+          hizo cargo del negocio en donde en el año 1980 se unio su hija
+          Maria Díaz a las labores de administración.
+        </p>
+        <p class="parrafosdescripcionnosotros">
+          (Don Manuel, junto a su hija Maria y su nieta Rocio)
+        </p>
+        <img
+          src="{% static 'img/familia2000.jpeg' %} "
+          alt="Traspaso de mando"
+          class="img-normalizada"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="py-3">
+    <div class="container.somos">
+      <h2 class="text-center">Crecimiento y expansión</h2>
+      <div class="text-center">
+        <p class="me-3 md-3">
+          En el año 1990 Don Manuel debido a una enfermedad, cedio el
+          negocio a su hermana menor Julia Díaz, quien con sus hijas y su
+          sobrina Maria siguieron a cargo del negocio, en donde lograron<br />
+          expandirse y actualizar las herramientas de negocio, automatizando
+          procesos de compra y venta de insumos y productos, ademas de
+          entrar al mundo de la venta online.
+        </p>
+        <p class="parrafosdescripcionnosotros">
+          (Don Manuel, junto a su hija Maria y su nieta Rocio)
+        </p>
+        <img
+          src="{% static 'img/3.jpg' %} " 
+          alt="Segundo traspaso"
+          class="img-normalizada"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="py-3">
+    <div class="container.somos">
+      <h2 class="text-center">Generación Actual</h2>
+      <div class="text-center">
+        <p class="me-3 md-3">
+          Francisca, bisnieta de Don Juan y Doña Carmela , es la actual
+          generación que recibira la llama de mantener aún el negocio
+          heradado
+        </p>
+        <p class="parrafosdescripcionnosotros">
+          (Francisca Díaz bisnieta de Juan y Carmela)
+        </p>
+        <img
+          src="{% static 'img/panaderiafamilia.jpg' %} "
+          alt="Nueva generación"
+          class="img-normalizada"
+        />
+      </div>
+    </div>
+  </section>
+
+
+
+
+{% endblock content %}

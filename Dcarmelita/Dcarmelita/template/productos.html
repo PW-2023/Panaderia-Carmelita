@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% load static %}
+{%block title%}PRODUCTOS{%endblock title%}
+{% block content %}
+
+<div class="container-fluid">
+    <div id="cards" class="row">
+        {% for producto in productos %}
+        <div class="col-sm-3">
+            <div class="card my-3">
+                <img class="card-img-top" src="../static/img/{{producto.imagen}}" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ producto.nombre }}</h5>
+                    <p class="card-text">{{ producto.descripcion }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">$ {{ producto.valor }}</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
+                    <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock content %}
