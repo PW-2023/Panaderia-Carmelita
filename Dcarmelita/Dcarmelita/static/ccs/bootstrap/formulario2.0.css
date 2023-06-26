@@ -1,0 +1,59 @@
+#bodisito {
+  background-color: antiquewhite;
+  display: flexbox;
+  flex-direction: column;
+  align-items: auto;
+  justify-content: auto;
+  height: 100vh;
+  /* overflow: hidden; */
+  margin: 0;
+}
+
+.form-control {
+  border: solid 2px;
+  color: rgb(6, 6, 6);
+  border-color: white;
+}
+
+.form-control:focus {
+  border-color: #0069d9;
+  box-shadow: none;
+}
+
+.btn-login {
+  background-color: #0069d9;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  border-radius: 2px;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+  color: #fff;
+  background-color: #0052cc;
+  border-color: #0052cc;
+}
+
+.form-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.form-divider hr {
+  border: 1px solid #e9ecef;
+  flex-grow: 1;
+}
+
+.form-divider span {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: #6c757d;
+}
+#botonsito {
+  color: black;
+  background-color: orange;
+}
