@@ -1,54 +1,72 @@
+<br>
+<div class="alert alert-primary" role="alert" style="background-color: lightcoral;">
+    <table class="table table-bordered" style="border-color: transparent;">
+        <thead>
+            <tr>
+                <th colspan="3" class="text-center">CARRITO</th>
+            </tr>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if request.session.carrito.items %}
+            {% for key, value in request.session.carrito.items %}
+            <tr >
+                <td>{{ value.nombre }}</td>
+                <td>{{ value.cantidad }}</td>
+                <td>${{ value.acumulado }}</td>
+            
+            </tr>
+            <tr class="row text-center">
+                <td >
+                    <a href="{% url 'Add' value.producto_id %}" ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z"/>
+                      </svg></a>
+                    <a href="{% url 'Sub' value.producto_id %}" ><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-patch-minus-fill" viewBox="0 0 16 16">
+                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM6 7.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z"/>
+                      </svg></a>
+                </td>
+            </tr>   
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="3">
+                    <div class="alert alert-danger text-center">Sin productos</div>
+                </td>
+            </tr>
+            {% endif %}
+        </tbody>
 
-<!-- <div class="modal fade" id="carritoModal" tabindex="-1" role="dialog" aria-labelledby="carritoModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="carritoModalLabel">Carrito de compras</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ul id="carritoProductos"></ul>
-                <p id="carritoTotal">Total: $0</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <a href="{% url 'checkout' %}" class="btn btn-primary">Checkout</a>
-            </div>
+        <tr>
+            <th scope="row">Total:</th>
+            <td colspan="2">${{ total_carrito }}</td>
+        </tr>
+    </table>
+    <hr>
+
+
+    <div class="row text-center">
+        <div class="col-12 d-flex justify-content-between">
+            <a href="{% url 'CLS' %}" class="btn btn-danger">Limpiar</a>
+            <a href="{% url 'CLS' %}" class="btn btn-success" onclick="mostrarMensaje()">Comprar</a>
         </div>
     </div>
-</div> -->
+    <script>
+        function mostrarMensaje() {
+            alert("Compra exitosa. ¡Gracias por tu compra!");
+        }
+    </script>
 
+    <style>
+        @media (max-width: 576px) {
+            .btn-adjust {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.4rem;
+            }
+        }
+    </style>
 
-
-<!--{% extends "base.html" %}
-{% block title %}PRODUCTOS{% endblock title %}
-{% block content %}
-
-<div class="container-fluid">
-    <div id="cards" class="row">
-        {% for producto in productos %}
-        <div class="col-sm-3">
-            <div class="card my-3">
-                <img class="card-img-top" src="../static/img/{{ producto.imagen }}" />
-                <div class="card-body">
-                    <h5 class="card-title">{{ producto.nombre }}</h5>
-                    <p class="card-text">{{ producto.descripcion }}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">$ {{ producto.valor }}</li>
-                </ul>
-                <div class="card-body">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#carritoModal" data-producto-id="{{ producto.id }}"><i class="bi bi-cart3"></i> Agregar al carrito</button>
-                    <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
 </div>
-
-{% include 'carrito.html' %}
-
-{% endblock content %}	-->

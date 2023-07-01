@@ -20,6 +20,9 @@
 </head>
 
 <body>
+    <div class="row justify-content-center">
+        
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
         <div class="container-fluid">
             <p class="text-center font-weight-bold"><a href="/index"><img style="width: 100px; margin-top: 15px;"
@@ -40,10 +43,37 @@
                         <a class="nav-link" href="/productos">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/quienessomos">Mantenedor Usuarios</a>
+                        <a class="nav-link" href="/editar-usuarios">Mantenedor Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/mapa">Mantenedor productos</a>
+                        <a class="nav-link" href="/editar-productos">Mantenedor productos</a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <!-- Button trigger modal -->
+                        <a href="/logout" class="btn"
+                            style="background-color: rgba(185, 134, 134, 0.747);margin-right: 10px;">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+
+                {% elif user.is_authenticated %}
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/quienessomos">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mapa">Visitanos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -52,10 +82,15 @@
                         <a href="/logout" class="btn"
                             style="background-color: rgba(185, 134, 134, 0.747);margin-right: 10px;">
                             Logout
-                        </a>  
+                        </a>
+                    </li>   
+                    <li class="nav-item">
+                        <a class="nav-link">Hola {{user.username}}</a>
                     </li>
                 </ul>
+
                 {% else %}
+            
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/index">Inicio</a>
@@ -87,23 +122,28 @@
                             Registrese
                         </button>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn" style="background-color: rgba(185, 134, 134, 0.747);" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                class="bi bi-cart3" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                            </svg>
-                        </button>
+                    <li class="nav-item" >
+                            {% if message_error %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{ message_error }}
+                                </div>
+                            {% endif %}
+                            {% if message %}
+                                <div class="alert alert-success" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endif %}
                     </li>
+
                 </ul>
+                
                 {% endif%}
-                <!-- Modal Login -->
                 <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="container">
+                                
                                 <form action="/login" method="POST" id="form" class="form">
                                     {% csrf_token %}
                                     <div>
@@ -116,19 +156,26 @@
                                     <br>
                                     <div class="form-control">
                                         <label for="username">Usuario</label>
-                                        <input type="text" placeholder="Rojas Calderon" id="username" name="username" />
+                                        <input type="text" placeholder="Rojas Calderon" id="username" name="username" required/>
                                         <i class="fas fa-check-circle"></i>
                                         <i class="fas fa-exclamation-circle"></i>
 
                                     </div>
                                     <div class="form-control">
                                         <label for="password">Contraseña</label>
-                                        <input type="password" placeholder="Contraseña" id="contrasena"
+                                        <input type="password" placeholder="Contraseña" id="contrasena" required
                                             name="contrasena" />
                                         <i class="fas fa-check-circle"></i>
                                         <i class="fas fa-exclamation-circle"></i>
 
                                     </div>
+
+                                    <div class="form-control">
+                                        <p class="text">¿Olvido su contraseña?</p>
+                                        <p><a data-bs-toggle="modal" data-bs-target="#exampleModalRecover"
+                                                href="">Recuperar Contraseña</a></p>
+                                    </div>
+
                                     <div>
                                         <button id="btn-send-forms" class="btn btn-primary my-4" type="submit"
                                             style="background-color: #c25f26; border: #c25f26; ">ENVIAR</button>
@@ -140,67 +187,169 @@
                     </div>
                 </div>
                 <!-- Modal Registro -->
-                <div class="modal fade" id="exampleModalRegister" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="exampleModalRecover" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="container">
-                                <form action="/registro" method="POST" id="form" class="form">
+                                
+                                <form action="/password_update" method="POST" id="form" class="form">
                                     {% csrf_token %}
                                     <div>
                                         <br>
                                         <div class="header" id="borde1" style="background-color: #f7f7f7;">
-                                            <h3>Crear cuenta</h3>
+                                            <h3>Recuperar Contraseña</h3>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="form-control">
-                                        <label for="first-name">Nombre</label>
-                                        <input type="text" placeholder="Carmelita" id="nombre" name="nombre" required />
-                                        <i class="fas fa-check-circle"></i>
-                                        <i class="fas fa-exclamation-circle"></i>
-
-                                    </div>
-                                    <div class="form-control">
-                                        <label for="last-name">Apellidos</label>
-                                        <input type="text" placeholder="Rojas Calderon" id="apellido" name="apellidos"
-                                            required />
-                                        <i class="fas fa-check-circle"></i>
-                                        <i class="fas fa-exclamation-circle"></i>
-                                    </div>
-                                    <div class="form-control">
                                         <label for="username">Usuario</label>
-                                        <input type="text" placeholder="Rojas Calderon" id="username" name="username"
-                                            required />
-                                        <i class="fas fa-check-circle"></i>
-                                        <i class="fas fa-exclamation-circle"></i>
-
-                                    </div>
-                                    <div class="form-control">
-                                        <label for="text">Email</label>
-                                        <input type="text" placeholder="@email.com" id="email" name="email" required />
+                                        <input type="text" placeholder="Rojas Calderon" id="username" name="username" required/>
                                         <i class="fas fa-check-circle"></i>
                                         <i class="fas fa-exclamation-circle"></i>
 
                                     </div>
                                     <div class="form-control">
                                         <label for="password">Contraseña</label>
-                                        <input type="password" placeholder="Contraseña" id="password" name="contrasena"
-                                            required />
+                                        <input type="password" placeholder="Contraseña" id="contrasena"
+                                            name="contrasena" required />
                                         <i class="fas fa-check-circle"></i>
                                         <i class="fas fa-exclamation-circle"></i>
+
+                                    </div>
+                                    <div class="form-control">
+                                        <label for="password">Repetir Contraseña</label>
+                                        <input type="password" placeholder="Contraseña" id="contrasena2"
+                                            name="contrasena2" required/>
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+
                                     </div>
                                     <div>
                                         <button id="btn-send-forms" class="btn btn-primary my-4" type="submit"
                                             style="background-color: #c25f26; border: #c25f26;">ENVIAR</button>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Modal Login -->
+            <!-- <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        {% if message_error %}
+                        <div class="alert alert-danger my-4">
+                            {{message_error}}
+                        </div>
+                        {% endif %}
+                        <div class="container">
+                            <form action="/login" method="POST" id="form" class="form">
+                                {% csrf_token %}
+
+                                <div>
+
+                                    <br>
+                                    <div class="header" id="borde1" style="background-color: #f7f7f7;">
+
+                                        <h3>Iniciar Sesión</h3>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-control">
+                                    <label for="username">Usuario</label>
+                                    <input type="text" placeholder="Rojas Calderon" id="username" name="username" />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+
+                                </div>
+                                <div class="form-control">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" placeholder="Contraseña" id="contrasena" name="contrasena" />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+
+                                </div>
+
+                                <div class="form-control">
+                                    <p class="text">¿Olvido su contraseña?</p>
+                                    <p><a href="">Recuperar Contraseña</a></p>
+                                </div>
+
+                                <div>
+                                    <button id="btn-send-forms" class="btn btn-primary my-4" type="submit"
+                                        style="background-color: #c25f26; border: #c25f26; ">ENVIAR</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Modal Registro -->
+            <div class="modal fade" id="exampleModalRegister" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="container">
+                            <form action="/registro" method="POST" id="form" class="form">
+                                {% csrf_token %}
+                                <div>
+                                    <br>
+                                    <div class="header" id="borde1" style="background-color: #f7f7f7;">
+                                        <h3>Crear cuenta</h3>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-control">
+                                    <label for="first-name">Nombre</label>
+                                    <input type="text" placeholder="Carmelita" id="nombre" name="nombre" required />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+
+                                </div>
+                                <div class="form-control">
+                                    <label for="last-name">Apellidos</label>
+                                    <input type="text" placeholder="Rojas Calderon" id="apellido" name="apellidos"
+                                        required />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="form-control">
+                                    <label for="username">Usuario</label>
+                                    <input type="text" placeholder="Rojas Calderon" id="username" name="username"
+                                        required />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+
+                                </div>
+                                <div class="form-control">
+                                    <label for="text">Email</label>
+                                    <input type="text" placeholder="@email.com" id="email" name="email" required />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+
+                                </div>
+                                <div class="form-control">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" placeholder="Contraseña" id="password" name="contrasena"
+                                        required />
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div>
+                                    <button id="btn-send-forms" class="btn btn-primary my-4" type="submit"
+                                        style="background-color: #c25f26; border: #c25f26;">ENVIAR</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </nav>
 

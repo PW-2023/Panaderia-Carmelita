@@ -31,29 +31,12 @@
     }
 </style>
 
-<script>
-    function extractFileName() {
-        var inputFile = document.getElementById('img-imagen');
-        var fileName = inputFile.value.split('\\').pop(); // Obtener solo el nombre del archivo sin la ruta completa
-        document.getElementById('txt-nombre-archivo').value = fileName; // Asignar el nombre del archivo al campo de texto correspondiente
-    }
-</script>
-
-<script>
-    function extractNombreArchivo(inputId, textFieldId) {
-        var inputFile = document.getElementById(inputId);
-        var fileName = inputFile.value.split('\\').pop();
-        document.getElementById(textFieldId).value = fileName;
-    }
-</script>
-
-
 <div class="alert alert-primary {{message_state}}" role="alert">
     {{ message }}
 </div>
 <br>
 <div class="container-fluid" style="width: 85%;">
-    <form action="/editar-productos/" method="POST" enctype="multipart/form-data">
+    <form action="/editar-usuarios/" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="hidden" name="action" value="CREATE">
 
@@ -63,50 +46,49 @@
         </div>
 
         <div class="form-group">
-            <label for="txt-descripcion">Descripción</label>
-            <input type="text" class="form-control" id="txt-descripcion" name="descripcion" placeholder="Descripción"
-                required>
+            <label for="txt-apellido">Apellido</label>
+            <input type="text" class="form-control" id="txt-Apellido" name="apellidos" placeholder="Apellido" required>
         </div>
-
         <div class="form-group">
-            <label for="img-imagen">Imagen</label>
-            <input type="file" class="form-control-file" id="img-imagen" name="imagen" required
-                onchange="extractFileName()">
+            <label for="txt-email">Email</label>
+            <input type="email" class="form-control" id="txt-email" name="email" placeholder="Email" required>
         </div>
-
         <div class="form-group">
-            <label for="txt-valor">Valor</label>
-            <input type="number" class="form-control" id="txt-valor" name="valor" placeholder="Valor" required>
+            <label for="txt-username">UserName</label>
+            <input type="text" class="form-control" id="txt-username" name="username" placeholder="username" required>
         </div>
-
-        <input type="hidden" id="txt-nombre-archivo" name="nombre_archivo">
-        <!-- Campo oculto para almacenar el nombre del archivo -->
-
-        <button class="btn btn-primary my-4" type="submit">Crear Producto</button>
+        <div class="form-group">
+            <label for="txt-password">Contraseña</label>
+            <input type="text" class="form-control" id="txt-password" name="password" placeholder="password" required>
+        </div>
+        <button class="btn btn-primary my-4" type="submit">Crear Usuario</button>
     </form>
-
     <div class="table-responsive">
         <table class="table mt-2">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Descripción</th>
-                    <th scope="col">Valor</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contraseña</th>
+                    <th scope="col">Usuario</th>
                     <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                {% for producto in productos %}
+                {% for usuario in usuarios %}
                 <tr>
-                    <td>{{ producto.id }}</td>
-                    <td>{{ producto.nombre }}</td>
-                    <td>{{ producto.descripcion }}</td>
-                    <td>${{ producto.valor }}</td>
+                    <td>{{ usuario.id }}</td>
+                    <td>{{ usuario.first_name }}</td>
+                    <td>{{ usuario.last_name }}</td>
+                    <td>{{ usuario.email }}</td>
+                    <td>{{ usuario.password }}</td>
+                    <td>{{ usuario.username }}</td>
                     <td>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#modal-producto-{{producto.id}}">
+                            data-bs-target="#modal-usuario-{{usuario.id}}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-gear" viewBox="0 0 16 16">
                                 <path
@@ -115,69 +97,67 @@
                                     d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
                             </svg>
                         </button>
-                        <div class="modal fade" id="modal-producto-{{producto.id}}" tabindex="-1"
-                            aria-labelledby="modal-productoLabel" aria-hidden="true">
+                        <div class="modal fade" id="modal-usuario-{{usuario.id}}" tabindex="-1"
+                            aria-labelledby="modal-usuarioLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="modal-productoLabel">Editar Regiones</h5>
+                                        <h5 class="modal-title" id="modal-usuarioLabel">Editar Regiones</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div>
-                                            <form action="/editar-productos/" method="POST"
+                                            <form action="/editar-usuarios/" method="POST"
                                                 enctype="multipart/form-data">
                                                 {% csrf_token %}
                                                 <input type="hidden" name="action" value="UPDATE">
-
+                                                
                                                 <div class="form-group">
-                                                    <label for="txt-nombre">ID</label>
+                                                    <label for="txt-id">Nombre</label>
                                                     <input type="text" class="form-control" id="txt-id"
-                                                        name="id" placeholder="ID" value="{{producto.id}}">
+                                                        name="id" placeholder="ID" value="{{usuario.id}}">
                                                 </div>
+
                                                 <div class="form-group">
                                                     <label for="txt-nombre">Nombre</label>
                                                     <input type="text" class="form-control" id="txt-nombre"
-                                                        name="nombre" placeholder="Nombre" value="{{producto.nombre}}">
-                                                </div   >
-
-                                                <div class="form-group">
-                                                    <label for="txt-descripcion">Descripción</label>
-                                                    <input type="text" class="form-control" id="txt-descripcion"
-                                                        name="descripcion" placeholder="Descripción" value="{{producto.descripcion}}">
+                                                        name="nombre" placeholder="Nombre" value="{{usuario.first_name}}">
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="img-imagen">Imagen</label>
-                                                    <input type="file" class="form-control-file" id="img-imagen-{{producto.id}}"
-                                                        name="imagen" 
-                                                        onchange="extractNombreArchivo('img-imagen-{{producto.id}}', 'txt-nombre-archivo{{producto.id}}')">
+                                                    <label for="txt-apellido">Apellido</label>
+                                                    <input type="text" class="form-control" id="txt-Apellido"
+                                                        name="apellidos" placeholder="Apellido" value="{{usuario.last_name}}">
                                                 </div>
-
                                                 <div class="form-group">
-                                                    <label for="txt-valor">Valor</label>
-                                                    <input type="number" class="form-control" id="txt-valor"
-                                                        name="valor" placeholder="Valor" value="{{producto.valor}}" >
+                                                    <label for="txt-email">Email</label>
+                                                    <input type="email" class="form-control" id="txt-email" name="email"
+                                                        placeholder="Email" value="{{usuario.email}}">
                                                 </div>
-
-                                                <input type="hidden" id="txt-nombre-archivo{{producto.id}}" name="nombre_archivo">
-                                                <!-- Campo oculto para almacenar el nombre del archivo -->
-
-                                                <button id="btn-send-forms" class="btn btn-primary my-4"
-                                                    type="submit">ENVIAR</button>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
+                                                <div class="form-group">
+                                                    <label for="txt-username">UserName</label>
+                                                    <input type="text" class="form-control" id="txt-username"
+                                                        name="username" placeholder="username" value="{{usuario.username}}">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="txt-password">Contraseña</label>
+                                                    <input type="text" class="form-control" id="txt-password"
+                                                        name="password" placeholder="password" value="{{usuario.password}}">
+                                                </div>
+                                                <button class="btn btn-primary my-4" type="submit">ENVIAR</button>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </td>
                     <td>
-                        <form method='POST' action="/editar-productos/">{% csrf_token %}
-                            <input id="txt-action-{{producto.id}}" name="action" type="hidden" value="DELETE">
-                            <input id="txt-id-{{producto.id}}" name="id" type="hidden" value="{{ producto.id }}">
+                        <form method='POST' action="/editar-usuarios/">{% csrf_token %}
+                            <input id="txt-action-{{usuario.id}}" name="action" type="hidden" value="DELETE">
+                            <input id="txt-id-{{producto.id}}" name="id" type="hidden" value="{{ usuario.id }}">
                             <button class="btn btn-danger">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash-fill" viewBox="0 0 16 16">

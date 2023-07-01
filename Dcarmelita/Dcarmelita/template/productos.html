@@ -3,27 +3,62 @@
 {% block content %}
 
 <div class="container-fluid">
-    <div id="cards" class="row">
-        {% for producto in productos %}
-        <div class="col-sm-3">
-            <div class="card my-3">
-                <img class="card-img-top" src="../static/img/{{producto.imagen}}" />
-                <div class="card-body">
-                    <h5 class="card-title">{{ producto.nombre }}</h5>
-                    <p class="card-text">{{ producto.descripcion }}</p>
+    <div class="row">
+        <div class="col-sm-8">
+            <div id="cards" class="row">
+                {% for producto in productos %}
+                <div class="col-sm-4">
+                    <div class="card my-3">
+                        <img class="card-img-top" src='{% static producto.imagen %}'/>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <br>
+                            <p class="card-text">{{ producto.descripcion }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">$ {{ producto.valor }}</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="{% url 'Add' producto.id %}" class="card-link1"><i class="bi bi-cart3"></i></a>
+                            <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">$ {{ producto.valor }}</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link1"><i class="bi bi-cart3"></i></a>
-                    <a href="#" class="card-link"><i class="bi bi-info-square-fill"></i></a>
-                </div>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
+        
+        <div class="col-sm-3" style="margin-left: auto;">
+            {% include "carrito.html"%}
+        </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var maxTitleHeight = 0;
+    var maxTextHeight = 0;
+
+    // Obtener la altura máxima para los títulos
+    $('.card-title').each(function() {
+      var titleHeight = $(this).height();
+      maxTitleHeight = Math.max(maxTitleHeight, titleHeight);
+    });
+
+    // Aplicar la altura máxima a los títulos
+    $('.card-title').height(maxTitleHeight);
+
+    // Obtener la altura máxima para los textos
+    $('.card-text').each(function() {
+      var textHeight = $(this).height();
+      maxTextHeight = Math.max(maxTextHeight, textHeight);
+    });
+
+    // Aplicar la altura máxima a los textos
+    $('.card-text').height(maxTextHeight);
+  });
+</script>
 
 
 {% endblock content %}

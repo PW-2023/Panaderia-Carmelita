@@ -68,10 +68,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Dcarmelita.context_processors.total_carrito',  # carrito context_processors
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'Dcarmelita.wsgi.application'
 
@@ -134,3 +136,11 @@ ROOT_STATIC = os.path.join(BASE_DIR,'Dcarmelita','static')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'panaderia_carmelita@outlook.com'
+EMAIL_HOST_PASSWORD = 'Carmelita_2023'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'panaderia_carmelita@outlook.com'

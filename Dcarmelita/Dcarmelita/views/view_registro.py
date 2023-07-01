@@ -26,7 +26,7 @@ def registro(request):
         usuario.last_name = apellidos
         usuario.email = email
         usuario.is_staff = 0
-        usuario.is_active = 0
+        usuario.is_active = 1
         usuario.date_joined = datetime.today()
 
         usuario.save()

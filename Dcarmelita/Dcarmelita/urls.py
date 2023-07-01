@@ -23,11 +23,13 @@ from Dcarmelita.views import view_quienessomos
 from Dcarmelita.views import view_mapa
 from Dcarmelita.views import view_registro
 from Dcarmelita.views import view_login
-    
+from Dcarmelita.views import view_editor_productos
+from Dcarmelita.views import view_editor_usuarios   
+from .views.view_carrito import agregar_producto, eliminar_producto, limpiar_carrito, restar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', view_index.index),
-    path('productos/', view_productos.productos),
+    path('productos/', view_productos.productos,name="productos"),
     path('index/', view_index.index),
     path('formulario/', view_formulario.formulario),
     path('quienessomos/', view_quienessomos.quienessomos),
@@ -35,4 +37,13 @@ urlpatterns = [
     path('registro', view_registro.registro),
     path('login', view_login.login),
     path('logout', view_login.logout),
+    path('password_update', view_login.update_pass),
+    path('editar-productos/', view_editor_productos.editor_productos, name='editar_productos'),
+    path('editar-usuarios/', view_editor_usuarios.editor_usuarios, name='editar_usuarios'),
+        # CARRITO
+    path('agregar/<int:producto_id>/', agregar_producto, name="Add"),
+    path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
+    path('restar/<int:producto_id>/', restar, name="Sub"),
+    path('limpiar/', limpiar_carrito, name="CLS"),
 ]
+    

@@ -5,25 +5,25 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 
 def login(request):
-    print('login')
     if request.method == 'GET':
-        return render(request, 'index.html', {'message_error' : None}) 
+        return render(request, 'index.html', {'message_error': None})
     elif request.method == 'POST':
         try:
-            print('request_post:', request.POST)
             user = request.POST['username']
-            password = request.POST['contrasena'] 
-            
+            password = request.POST['contrasena']
+
             username = authenticate(username=user, password=password)
-            print('username: ', username)                    
+
             if username is not None:
-                login_user(request, username)         
+                login_user(request, username)
                 return redirect('/index')
             else:
-                return render(request, 'index.html', {'message_error' : 'USUARIO O CONTRASEÑA INVALIDA'}) 
+                context = {'message_error': 'Usuario o contraseña inválidos'}
+                return render(request, 'index.html', context)
         except Exception as e:
             traceback.print_exc()
-            return render(request, 'index.html', {'message_error' : 'ERROR INESPERADO INTENTE MAS TARDE'})         
+            context = {'message_error': 'Error inesperado. Por favor, inténtelo nuevamente más tarde'}
+            return render(request, 'index.html', context)         
 
 
 def logout(request): 
@@ -39,8 +39,8 @@ def update_pass(request):
     if request.method == 'POST':
         # OBTENER INFORMACIÓN DEL FORMULARIO
         username = request.POST.get('username')
-        secret = request.POST.get('password')
-        secret2 = request.POST.get('password2')
+        secret = request.POST.get('contrasena')
+        secret2 = request.POST.get('contrasena2')
         print('username: ', username)
         print('secret: ', secret)  
         print('secret2: ', secret2)  
@@ -50,7 +50,7 @@ def update_pass(request):
                 'message_error': 'Contraseñas no coinciden.' 
             }  
             print('context: ', context)
-            return render(request, 'update-secret.html', context)
+            return render(request, 'index.html', context)
       
         # BUSCAR USUARIO EN EL SISTEMA
         try:
@@ -71,7 +71,5 @@ def update_pass(request):
                 'message_error': 'Problemas al actualizar la contraseña.' 
             }    
         print('context: ', context)        
-        return render(request, 'update-secret.html', context)            
-    elif request.method == 'GET':
-        context = {}
-        return render(request, 'update-secret.html', context)
+        return render(request, 'index.html', context)     
+
